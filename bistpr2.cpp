@@ -142,6 +142,7 @@ int count;
 		else{a=k2;b=k1;}
 		c=rangesearchhelper(b,a,root);
 		cout<<"NULL"<<endl;
+		cout<<"the nos of elements in between them is:- ";
 		return c;	
 	}
 	int rangesearchhelper(int k1,int k2,node*current){
@@ -152,7 +153,8 @@ int count;
 			a=1+rangesearchhelper(k1,k2,current->left);
 			cout<<current->data;
 			cout<<"->";
-			b=rangesearchhelper(k1,k2,current->right);		
+			b=rangesearchhelper(k1,k2,current->right);
+			return a+b;		
 		}	
 	}	
 
